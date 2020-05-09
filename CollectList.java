@@ -7,8 +7,9 @@ import java.util.Scanner;
 
 public class CollectList {
 
-    public List<String> createList(String string) {
+    public List<String> createList(char[] string_) {
 
+        String string = String.valueOf(string_);
         System.out.println("---------");
         System.out.printf("| %c %c %c |\n", string.charAt(0), string.charAt(1), string.charAt(2));
         System.out.printf("| %c %c %c |\n", string.charAt(3), string.charAt(4), string.charAt(5));
