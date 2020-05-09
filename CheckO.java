@@ -1,4 +1,11 @@
 package tictactoe;
 
-public class CheckO {
+import java.util.List;
+
+public class CheckO implements Check {
+
+    @Override
+    public boolean check(List<String> list) {
+        return list.contains("OOO");
+    }
 }
