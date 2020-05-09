@@ -31,6 +31,9 @@ public class CollectList {
         } else if (new CheckO().check(list)) {
             System.out.println("O wins");
             return true;
+        } else if (!string.contains(" ")) {
+            System.out.println("Draw");
+            return true;
         }
 
         return false;
