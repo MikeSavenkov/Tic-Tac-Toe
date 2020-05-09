@@ -1,13 +1,11 @@
 package tictactoe;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class CollectList {
 
-    public List<String> createList(char[] string_) {
+    public boolean createList(char[] string_) {
 
         String string = String.valueOf(string_);
         System.out.println("---------");
@@ -25,6 +23,16 @@ public class CollectList {
         String str7 = string.substring(0, 1) + string.substring(4, 5) + string.substring(8, 9);
         String str8 = string.substring(2, 3) + string.substring(4, 5) + string.substring(6, 7);
 
-        return new ArrayList<>(Arrays.asList(str1, str2, str3, str4, str5, str6, str7, str8));
+        List<String> list = Arrays.asList(str1, str2, str3, str4, str5, str6, str7, str8);
+
+        if (new CheckX().check(list)) {
+            System.out.println("X wins");
+            return true;
+        } else if (new CheckO().check(list)) {
+            System.out.println("O wins");
+            return true;
+        }
+
+        return false;
     }
 }
